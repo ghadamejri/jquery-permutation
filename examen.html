@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<title>Exemple tâche à faire</title>
+		<script src="js/jquery.js"></script>
+		<script src="js/code.js"></script>
+		<link rel="stylesheet" href="style.css"></link>
+
+	</head>
+	<body>
+	<fieldset id="authent">
+		<table>
+			<tr>
+				<td> Nom   :</td><td><input type='text' name='nom' id='nom'></td>
+			</tr>
+			<tr>
+				<td>Sexe :</td>
+				<td><input type='radio' name='sexe' id='sexe1' value="1" checked>M
+				 <input type='radio' name='sexe' id='sexe2' value="2">F</td>
+			</tr>
+			<tr>
+				<td><input type="button" value="valider" id="valid" class="btn add-btn"> </td>
+			</tr>
+		</table>
+	</fieldset>
+
+	<fieldset id="global">
+		<legend>
+			<span id="bienvenue"></span>
+		</legend>
+		<h1>Liste des liens/images</h1>
+		Nombre d'insertion possible des liens et des images : <input type="text" id="nb" value="5" size="2">
+		<br><br>
+		<table>
+			<tr>
+				<td width="200">Lien ou image : <select  name="lienimage" id="lienimage" >
+				   <option id="image1" value="image1.png">image1</option>
+				   <option id="image2" value="image2.png" >image2</option>
+				   <option id="image3" value="image3.png">image3</option>
+				   <option id="image4" value="image4.png">image4</option>
+				   <option id="lien1"> lien1</option>
+				   <option id="lien2"> lien2</option>
+				   <option id="lien3"> lien3</option>
+				   <option id="lien14"> lien4</option>
+				</td>
+				<td>Type :<input type="radio" name="imagalien" id="image" value="image"/>image<input type="radio" name="imagalien" id="lien" value="lien"/>lien</td>
+			</tr>
+			<tr>
+				<td>
+					<br>
+					Description (facultative)<br><textarea id="description" placeholder="Description"></textarea>
+				</td>
+				<td>
+					Choisir une classe: 
+					<select name="list" id="list">
+					   <option id="class1"> class1</option>
+					   <option id="class2"> class2</option>
+					   <option id="class3"> class3</option>
+					   <option id="class4"> class4</option>
+				   </select>
+				</td>
+				<td><button id="boutonAdd" class="btn add-btn">+ Ajouter</button></td>
+			</tr>
+		</table>
+		<div id="list1">
+			<h4>Liste des liens </h4>
+			<!--div id="content1"-->
+			<ol id="listeliens">
+			</ol>
+		</div>
+		<div id="list2">
+			<h4>Liste des images </h4>
+			<ol id="listeimages">
+			</ol>
+		</div>
+		<br><br><br><br>
+		<div class="cb">
+			<hr> <b>Permutez un lien et une image :</b>
+			<br><br>
+			Numéro du lien :
+			<select name='lien' id='li'>
+				<option value='0'> 1 </option>
+				<option value='1'> 2 </option>
+				<option value='2'> 3 </option>
+				<option value='3'> 4 </option>
+			</select>
+			&nbsp;&nbsp;Numéro de l'image :
+			<select name='image' id='im'>
+				<option value='0'> 1 </option>
+				<option value='1'> 2 </option>
+				<option value='2'> 3 </option>
+				<option value='3'> 4 </option>
+			</select> 
+			<button id="per" class="btn add-btn"> permute</button>
+</div>
+</div>
+		</fieldset>
+	</body>
+</html>
